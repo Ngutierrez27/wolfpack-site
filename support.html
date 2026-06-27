@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Wolfpack Daily Tracker</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #000; color: #e5e5e5; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif; font-size: 16px; line-height: 1.7; }
+    header { background: #0a0a0a; border-bottom: 1px solid #1f1f1f; padding: 24px 32px; display: flex; align-items: center; gap: 16px; }
+    header .logo { width: 44px; height: 44px; background: linear-gradient(135deg, #D4AF37, #FFD700); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 22px; }
+    header h1 { font-size: 20px; font-weight: 700; color: #fff; letter-spacing: -0.3px; }
+    header p { font-size: 13px; color: #888; }
+    nav { background: #0a0a0a; border-bottom: 1px solid #1a1a1a; padding: 0 32px; display: flex; gap: 32px; }
+    nav a { color: #888; text-decoration: none; font-size: 14px; font-weight: 500; padding: 14px 0; border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s; }
+    nav a:hover { color: #D4AF37; }
+    nav a.active { color: #D4AF37; border-bottom-color: #D4AF37; }
+    .container { max-width: 760px; margin: 0 auto; padding: 64px 32px; }
+    .badge { display: inline-block; background: rgba(212,175,55,0.12); color: #D4AF37; font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(212,175,55,0.25); margin-bottom: 20px; }
+    h2.page-title { font-size: 36px; font-weight: 800; color: #fff; letter-spacing: -0.8px; margin-bottom: 8px; }
+    .subtitle { font-size: 18px; color: #666; margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid #1a1a1a; }
+    .contact-card { background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(255,215,0,0.04)); border: 1px solid rgba(212,175,55,0.3); border-radius: 18px; padding: 36px; margin-bottom: 56px; text-align: center; }
+    .contact-card h3 { font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 8px; }
+    .contact-card p { color: #888; margin-bottom: 24px; font-size: 15px; }
+    .email-btn { display: inline-block; background: linear-gradient(135deg, #D4AF37, #FFD700); color: #000; font-weight: 800; font-size: 15px; padding: 14px 32px; border-radius: 30px; text-decoration: none; letter-spacing: 0.2px; }
+    .email-btn:hover { opacity: 0.9; text-decoration: none; }
+    .section { margin-bottom: 56px; }
+    h3.section-title { font-size: 22px; font-weight: 700; color: #fff; letter-spacing: -0.3px; margin-bottom: 20px; }
+    .faq-item { border: 1px solid #1a1a1a; border-radius: 14px; margin-bottom: 12px; overflow: hidden; }
+    .faq-q { background: #0d0d0d; padding: 20px 24px; font-size: 15px; font-weight: 600; color: #e5e5e5; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-q span.icon { color: #D4AF37; font-size: 20px; font-weight: 300; }
+    .faq-a { background: #0a0a0a; padding: 0 24px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
+    .faq-a.open { max-height: 200px; padding: 20px 24px; }
+    .faq-a p { color: #888; font-size: 14px; margin: 0; }
+    .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .feature-card { background: #0d0d0d; border: 1px solid #1a1a1a; border-radius: 14px; padding: 22px; }
+    .feature-card .icon { font-size: 28px; margin-bottom: 12px; }
+    .feature-card h4 { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+    .feature-card p { font-size: 13px; color: #666; margin: 0; }
+    .response-badge { display: inline-flex; align-items: center; gap: 8px; background: #0d0d0d; border: 1px solid #1a1a1a; border-radius: 30px; padding: 8px 18px; font-size: 13px; color: #888; margin-top: 16px; }
+    .response-badge span.dot { width: 8px; height: 8px; background: #4caf50; border-radius: 50%; }
+    a { color: #D4AF37; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { background: #0a0a0a; border-top: 1px solid #1a1a1a; padding: 32px; text-align: center; }
+    footer p { font-size: 13px; color: #444; margin: 0; }
+    footer a { color: #D4AF37; }
+    @media (max-width: 600px) {
+      .feature-grid { grid-template-columns: 1fr; }
+      h2.page-title { font-size: 28px; }
+      .container { padding: 40px 20px; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">🐺</div>
+  <div>
+    <h1>Wolfpack Daily Tracker</h1>
+    <p>Your elite personal operating system</p>
+  </div>
+</header>
+<nav>
+  <a href="privacy-policy.html">Privacy Policy</a>
+  <a href="support.html" class="active">Support</a>
+</nav>
+<div class="container">
+  <div class="badge">Support</div>
+  <h2 class="page-title">How can we help?</h2>
+  <p class="subtitle">Get answers to common questions or reach out directly — we respond fast.</p>
+
+  <div class="contact-card">
+    <h3>Contact Support</h3>
+    <p>Have a question, bug report, or feature request? Send us an email and we'll get back to you within 24 hours.</p>
+    <a href="mailto:ngutierrez0120@gmail.com" class="email-btn">ngutierrez0120@gmail.com</a>
+    <br/>
+    <div class="response-badge"><span class="dot"></span> Typically responds within 24 hours</div>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">App Features</h3>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="icon">🎯</div>
+        <h4>Daily Goals</h4>
+        <p>Set your 3 daily wins and track them every single day to build momentum.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">💪</div>
+        <h4>Workout Tracking</h4>
+        <p>Follow a structured weekly split — Push, Pull, Legs, and more — built for elite results.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">💧</div>
+        <h4>Hydration Tracking</h4>
+        <p>Log your water intake toward your daily goal and get notified to stay on track.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">📸</div>
+        <h4>Progress Photos</h4>
+        <p>Capture your transformation with weekly progress photos stored securely in your account.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🔥</div>
+        <h4>Daily Streak</h4>
+        <p>Build an unbreakable streak by completing your daily goals consistently.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">📅</div>
+        <h4>Daily Schedule</h4>
+        <p>Your optimized daily timeline from 4:30 AM wake-up through 9:30 PM sleep prep.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">Frequently Asked Questions</h3>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">How do I reset my password? <span class="icon">+</span></div>
+      <div class="faq-a"><p>On the login screen, tap "Forgot Password?" and enter your email address. You'll receive a reset link within a few minutes. Check your spam folder if you don't see it.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">Is my data backed up? <span class="icon">+</span></div>
+      <div class="faq-a"><p>Yes. All your data — goals, workouts, hydration logs, and progress photos — is synced securely to your account via Firebase. You won't lose anything if you switch phones or reinstall the app.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">How do I enable hydration notifications? <span class="icon">+</span></div>
+      <div class="faq-a"><p>Go to the Schedule tab and tap the bell icon next to the Hydration section. Make sure notifications are enabled for Wolfpack in your iPhone Settings → Notifications.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">Can I use the app on multiple devices? <span class="icon">+</span></div>
+      <div class="faq-a"><p>Yes. Log in with the same email and password on any device. Your data will sync automatically across all devices linked to your account.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">How do I delete my account and data? <span class="icon">+</span></div>
+      <div class="faq-a"><p>You can request account deletion by emailing us at ngutierrez0120@gmail.com. We will permanently delete your account and all associated data within 30 days.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">Why isn't the app saving my progress? <span class="icon">+</span></div>
+      <div class="faq-a"><p>Make sure you're connected to the internet when first logging in. If the problem persists, try logging out and back in. If it still doesn't work, contact us and we'll help you resolve it.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">Is Wolfpack free? <span class="icon">+</span></div>
+      <div class="faq-a"><p>The core app is free to download and use. Premium features may be added in future updates — existing users will be notified before any paid features are introduced.</p></div>
+    </div>
+  </div>
+
+</div>
+<footer>
+  <p>&copy; 2026 Wolfpack Daily Tracker &nbsp;·&nbsp; <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="support.html">Support</a></p>
+</footer>
+<script>
+  function toggle(el) {
+    const answer = el.nextElementSibling;
+    const icon = el.querySelector('.icon');
+    const isOpen = answer.classList.contains('open');
+    document.querySelectorAll('.faq-a.open').forEach(a => {
+      a.classList.remove('open');
+      a.previousElementSibling.querySelector('.icon').textContent = '+';
+    });
+    if (!isOpen) {
+      answer.classList.add('open');
+      icon.textContent = '−';
+    }
+  }
+</script>
+</body>
+</html>
